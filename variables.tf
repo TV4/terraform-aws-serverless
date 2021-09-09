@@ -149,7 +149,7 @@ locals {
   sls_log_stream_arn = "arn:${local.iam_partition}:logs:${local.iam_region}:${local.iam_account_id}:log-group:/aws/lambda/${local.sls_service_name}-${local.iam_stage}-*:log-stream:"
 
   # Serverless created CloudWatch events.
-  sls_events_arn = "arn:${local.iam_partition}:events:${local.iam_region}:${local.iam_account_id}:rule/${local.sls_service_name}-${local.iam_stage}"
+  sls_events_arn = "arn:${local.iam_partition}:events:${local.iam_region}:${local.iam_account_id}:rule/${local.sls_service_name}-${local.iam_stage}-*"
 
   # Serverless lambda function ARN.
   sls_lambda_arn = "arn:${local.iam_partition}:lambda:${local.iam_region}:${local.iam_account_id}:function:${local.iam_stage}-${local.sls_service_name}-*"
@@ -182,6 +182,8 @@ locals {
   #
   # Example: `arn:aws:apigateway:us-east-1::/tags/arn%3Aaws%3Aapigateway%3Aus-east-1%3A%3A%2Frestapis%2Fvgrecx13z6%2Fstages%2Fsandbox`
   sls_apigw_tags_arn = "arn:${local.iam_partition}:apigateway:${local.iam_region}::/tags*"
+
+  sls_apigw_apikeys_arn = "arn:${local.iam_partition}:apigateway:${local.iam_region}::/apikeys*"
 
   # All log streams.
   # Needed for `logs:DescribeLogGroups`

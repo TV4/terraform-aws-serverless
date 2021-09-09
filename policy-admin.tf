@@ -79,6 +79,7 @@ data "aws_iam_policy_document" "admin" {
       "events:Put*",
       "events:Remove*",
       "events:Delete*",
+      "events:Describe*",
     ]
 
     resources = [

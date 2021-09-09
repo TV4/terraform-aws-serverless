@@ -124,6 +124,7 @@ data "aws_iam_policy_document" "developer" {
     resources = [
       local.sls_apigw_arn,
       local.sls_apigw_tags_arn,
+      local.sls_apigw_apikeys_arn
     ]
   }
 
