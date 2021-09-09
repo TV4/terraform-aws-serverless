@@ -69,6 +69,7 @@ data "aws_iam_policy_document" "admin" {
 
     resources = [
       local.lambda_role_iam_arn,
+      local.lambda_role_iam_arn2,
     ]
   }
 

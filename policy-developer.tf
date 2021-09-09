@@ -88,6 +88,7 @@ data "aws_iam_policy_document" "developer" {
       "lambda:PublishVersion",
       "lambda:RemovePermission",
       "lambda:Update*",
+      "lambda:DeleteFunction*",
     ]
 
     resources = [
