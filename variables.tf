@@ -146,7 +146,7 @@ locals {
   sls_deploy_bucket_arn = "arn:${local.iam_partition}:s3:::${local.sls_service_name}-*-serverless*-*"
 
   # Serverless created log stream.
-  sls_log_stream_arn = "arn:${local.iam_partition}:logs:${local.iam_region}:${local.iam_account_id}:log-group:/aws/lambda/${local.sls_service_name}-${local.iam_stage}-*:log-stream:"
+  sls_log_stream_arn = "arn:${local.iam_partition}:logs:${local.iam_region}:${local.iam_account_id}:log-group:/aws/lambda/${local.iam_stage}-${local.sls_service_name}-*:log-stream:"
 
   # Serverless created CloudWatch events.
   sls_events_arn = "arn:${local.iam_partition}:events:${local.iam_region}:${local.iam_account_id}:rule/${local.sls_service_name}-${local.iam_stage}-*"
