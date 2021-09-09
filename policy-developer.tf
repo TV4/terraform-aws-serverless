@@ -92,6 +92,7 @@ data "aws_iam_policy_document" "developer" {
 
     resources = [
       local.sls_lambda_arn,
+      local.sls_lambda_arn2,
     ]
   }
 
