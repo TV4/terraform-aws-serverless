@@ -138,7 +138,7 @@ locals {
   lambda_role_iam_s3_custom_resource_arn     = "arn:${local.iam_partition}:iam::${local.iam_account_id}:role/${local.sls_service_name}-${local.iam_stage}-IamRoleCustomResourcesLam*"
 
   # Serverless CloudFormation stack ARN.
-  sls_cloudformation_arn = "arn:${local.iam_partition}:cloudformation:${local.iam_region}:${local.iam_account_id}:stack/${local.sls_service_name}-${local.iam_stage}/*"
+  sls_cloudformation_arn = "arn:${local.iam_partition}:cloudformation:${local.iam_region}:${local.iam_account_id}:stack/${local.sls_service_name}*${local.iam_stage}/*"
 
   # Serverless target deployment bucket ARN.
   # - A long service name can endup with truncated bucket names like:
