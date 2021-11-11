@@ -135,7 +135,7 @@ locals {
   lambda_role_name         = var.lambda_role_name != "" ? var.lambda_role_name : local.default_lambda_role_name
   lambda_role_iam_arn      = "arn:${local.iam_partition}:iam::${local.iam_account_id}:role/${local.sls_service_name}*${local.iam_stage}*lambdaRole"
   lambda_role_iam_arn2      = "arn:${local.iam_partition}:iam::${local.iam_account_id}:role/${local.sls_service_name}*${local.iam_stage}*"
-  lambda_role_iam_s3_custom_resource_arn     = "arn:${local.iam_partition}:iam::${local.iam_account_id}:role/${local.sls_service_name}*${local.iam_stage}*IamRoleCustomResourcesLam*"
+  lambda_role_iam_s3_custom_resource_arn     = "arn:${local.iam_partition}:iam::${local.iam_account_id}:role/${local.sls_service_name}*${local.iam_stage}*IamRoleCustomResources*"
 
   # Serverless CloudFormation stack ARN.
   sls_cloudformation_arn = "arn:${local.iam_partition}:cloudformation:${local.iam_region}:${local.iam_account_id}:stack/${local.sls_service_name}*${local.iam_stage}/*"
