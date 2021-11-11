@@ -154,8 +154,7 @@ locals {
   sls_events_arn = "arn:${local.iam_partition}:events:${local.iam_region}:${local.iam_account_id}:rule/${local.sls_service_name}*"
 
   # Serverless lambda function ARN.
-  sls_lambda_arn = "arn:${local.iam_partition}:lambda:${local.iam_region}:${local.iam_account_id}:function:${local.iam_stage}-${local.sls_service_name}-*"
-  sls_lambda_arn2 = "arn:${local.iam_partition}:lambda:${local.iam_region}:${local.iam_account_id}:function:${local.sls_service_name}-${local.iam_stage}-*"
+  sls_lambda_arn = "arn:${local.iam_partition}:lambda:${local.iam_region}:${local.iam_account_id}:function:*${local.sls_service_name}*"
 
   # Serverless Lambda Layer ARN.
   sls_layer_arn = "arn:${local.iam_partition}:lambda:${local.iam_region}:${local.iam_account_id}:layer:${local.iam_stage}-${local.sls_service_name}-*"
